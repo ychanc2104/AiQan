@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "home": "Home",
+    "messages": "Messages",
+    "notifications": "Notifications",
+    "profile": "Profile",
+    "login": "Sign in",
+    "subscribe": "Subscribe",
+    "language": "Language",
+    "back": "Back",
+    "close": "Close"
+  },
+  "sidebar": {
+    "personalize": "Personalize",
+    "search": "Search",
+    "post": "Post",
+    "liked": "Liked",
+    "saved": "Saved",
+    "subscribed": "Subscribed",
+    "recommended": "Recommended",
+    "searchPlaceholder": "Search creators, content...",
+    "searchHint": "Search \"{query}\" (backend coming soon)",
+    "sidebarSubscribe": "Subscribe"
+  },
+  "feed": {
+    "latest": "Latest",
+    "liked": "Liked",
+    "saved": "Saved",
+    "subscribed": "Subscribed",
+    "all": "All",
+    "loadMore": "Load more",
+    "count": "{n} items",
+    "empty": {
+      "liked": "No liked content yet",
+      "saved": "No saved content yet",
+      "subscribed": "You haven't subscribed to anyone yet",
+      "all": "No content available"
+    },
+    "countries": {
+      "TH": "Thailand",
+      "VN": "Vietnam",
+      "ID": "Indonesia"
+    }
+  },
+  "card": {
+    "original": "Source",
+    "like": "Like",
+    "unlike": "Unlike",
+    "save": "Save",
+    "unsave": "Unsave"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "empty": "No notifications yet"
+  },
+  "messages": {
+    "all": "All",
+    "priority": "Priority",
+    "unread": "Unread",
+    "noConversations": "No conversations",
+    "selectConversation": "Select a conversation to start chatting",
+    "tipLabel": "Tip amount NT$",
+    "tipButton": "Tip",
+    "send": "Send",
+    "inputPlaceholder": "Type a message..."
+  },
+  "creator": {
+    "posts": "Posts",
+    "subscribers": "Subscribers",
+    "likes": "Likes",
+    "showMore": "Show more",
+    "collapse": "Collapse",
+    "noPosts": "No posts yet",
+    "subscribeNow": "Subscribe now",
+    "unlockSingle": "Unlock this post",
+    "free": "Free",
+    "perMonth": "mo",
+    "locked": "Subscribe to unlock",
+    "audience": {
+      "public": "Public",
+      "subscribers": "Subscribers only",
+      "premium": "Premium only",
+      "private": "Private"
+    }
+  },
+  "profile": {
+    "title": "Settings",
+    "nickname": "Nickname",
+    "nationality": "Nationality",
+    "bio": "Bio",
+    "bioPlaceholder": "Tell us about yourself...",
+    "avatar": "Profile picture",
+    "banner": "Cover banner",
+    "save": "Save changes",
+    "saved": "Saved!",
+    "deleteAccount": "Delete account",
+    "deleteConfirm": "Are you sure? This cannot be undone.",
+    "deleteConfirmButton": "Confirm delete",
+    "cancel": "Cancel",
+    "creatorLocked": "Become a creator to unlock",
+    "becomeCreator": "Apply to become a creator",
+    "payout": "Payout settings",
+    "payoutDesc": "Set up your payout account to receive subscription earnings"
+  },
+  "post": {
+    "title": "New post",
+    "back": "Back",
+    "titleLabel": "Title",
+    "titlePlaceholder": "Post title (optional)",
+    "contentPlaceholder": "Share your content...",
+    "schedule": "Schedule",
+    "audience": "Audience",
+    "copyright": "Copyright",
+    "publish": "Publish",
+    "audiences": {
+      "public": "Public",
+      "subscribers": "Subscribers only",
+      "premium": "Premium only",
+      "private": "Private"
+    },
+    "copyrights": {
+      "original": "Original content",
+      "cc-by": "CC BY",
+      "cc-by-nc": "CC BY-NC",
+      "all-rights-reserved": "All rights reserved"
+    }
+  }
+}

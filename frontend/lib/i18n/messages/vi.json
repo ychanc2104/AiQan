@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "messages": "Tin nhắn",
+    "notifications": "Thông báo",
+    "profile": "Hồ sơ",
+    "login": "Đăng nhập",
+    "subscribe": "Đăng ký",
+    "language": "Ngôn ngữ",
+    "back": "Quay lại",
+    "close": "Đóng"
+  },
+  "sidebar": {
+    "personalize": "Cá nhân hóa",
+    "search": "Tìm kiếm",
+    "post": "Đăng bài",
+    "liked": "Đã thích",
+    "saved": "Đã lưu",
+    "subscribed": "Bài từ đăng ký",
+    "recommended": "Creator đề xuất",
+    "searchPlaceholder": "Tìm creator, nội dung...",
+    "searchHint": "Tìm \"{query}\" (tính năng sắp ra mắt)",
+    "sidebarSubscribe": "Theo dõi"
+  },
+  "feed": {
+    "latest": "Mới nhất",
+    "liked": "Đã thích",
+    "saved": "Đã lưu",
+    "subscribed": "Bài đăng ký",
+    "all": "Tất cả",
+    "loadMore": "Tải thêm",
+    "count": "{n} mục",
+    "empty": {
+      "liked": "Chưa có nội dung đã thích",
+      "saved": "Chưa có nội dung đã lưu",
+      "subscribed": "Bạn chưa theo dõi creator nào",
+      "all": "Chưa có nội dung"
+    },
+    "countries": {
+      "TH": "Thái Lan",
+      "VN": "Việt Nam",
+      "ID": "Indonesia"
+    }
+  },
+  "card": {
+    "original": "Gốc",
+    "like": "Thích",
+    "unlike": "Bỏ thích",
+    "save": "Lưu",
+    "unsave": "Bỏ lưu"
+  },
+  "notifications": {
+    "title": "Thông báo",
+    "empty": "Chưa có thông báo"
+  },
+  "messages": {
+    "all": "Tất cả",
+    "priority": "Ưu tiên",
+    "unread": "Chưa đọc",
+    "noConversations": "Không có cuộc trò chuyện",
+    "selectConversation": "Chọn cuộc trò chuyện để bắt đầu",
+    "tipLabel": "Số tiền ủng hộ NT$",
+    "tipButton": "Ủng hộ",
+    "send": "Gửi",
+    "inputPlaceholder": "Nhập tin nhắn..."
+  },
+  "creator": {
+    "posts": "Bài viết",
+    "subscribers": "Người theo dõi",
+    "likes": "Lượt thích",
+    "showMore": "Xem thêm",
+    "collapse": "Thu gọn",
+    "noPosts": "Chưa có bài viết",
+    "subscribeNow": "Đăng ký ngay",
+    "unlockSingle": "Mở khóa bài này",
+    "free": "Miễn phí",
+    "perMonth": "tháng",
+    "locked": "Đăng ký để mở khóa",
+    "audience": {
+      "public": "Công khai",
+      "subscribers": "Chỉ người theo dõi",
+      "premium": "Chỉ premium",
+      "private": "Riêng tư"
+    }
+  },
+  "profile": {
+    "title": "Cài đặt",
+    "nickname": "Biệt danh",
+    "nationality": "Quốc tịch",
+    "bio": "Giới thiệu",
+    "bioPlaceholder": "Giới thiệu về bản thân...",
+    "avatar": "Ảnh đại diện",
+    "banner": "Ảnh bìa",
+    "save": "Lưu thay đổi",
+    "saved": "Đã lưu!",
+    "deleteAccount": "Xóa tài khoản",
+    "deleteConfirm": "Bạn chắc chắn? Không thể hoàn tác.",
+    "deleteConfirmButton": "Xác nhận xóa",
+    "cancel": "Hủy",
+    "creatorLocked": "Trở thành creator để mở khóa",
+    "becomeCreator": "Đăng ký làm creator",
+    "payout": "Cài đặt thanh toán",
+    "payoutDesc": "Thiết lập tài khoản nhận tiền từ đăng ký"
+  },
+  "post": {
+    "title": "Bài viết mới",
+    "back": "Quay lại",
+    "titleLabel": "Tiêu đề",
+    "titlePlaceholder": "Tiêu đề bài viết (tùy chọn)",
+    "contentPlaceholder": "Chia sẻ nội dung của bạn...",
+    "schedule": "Lên lịch",
+    "audience": "Đối tượng",
+    "copyright": "Bản quyền",
+    "publish": "Đăng",
+    "audiences": {
+      "public": "Công khai",
+      "subscribers": "Chỉ người theo dõi",
+      "premium": "Chỉ premium",
+      "private": "Riêng tư"
+    },
+    "copyrights": {
+      "original": "Nội dung gốc",
+      "cc-by": "CC BY",
+      "cc-by-nc": "CC BY-NC",
+      "all-rights-reserved": "Bảo lưu mọi quyền"
+    }
+  }
+}

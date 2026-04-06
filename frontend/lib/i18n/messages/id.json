@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "messages": "Pesan",
+    "notifications": "Notifikasi",
+    "profile": "Profil",
+    "login": "Masuk",
+    "subscribe": "Langganan",
+    "language": "Bahasa",
+    "back": "Kembali",
+    "close": "Tutup"
+  },
+  "sidebar": {
+    "personalize": "Personalisasi",
+    "search": "Cari",
+    "post": "Posting",
+    "liked": "Disukai",
+    "saved": "Disimpan",
+    "subscribed": "Postingan Langganan",
+    "recommended": "Kreator Pilihan",
+    "searchPlaceholder": "Cari kreator, konten...",
+    "searchHint": "Cari \"{query}\" (fitur segera hadir)",
+    "sidebarSubscribe": "Ikuti"
+  },
+  "feed": {
+    "latest": "Konten Terbaru",
+    "liked": "Yang Saya Suka",
+    "saved": "Simpanan Saya",
+    "subscribed": "Postingan Langganan",
+    "all": "Semua",
+    "loadMore": "Muat lebih banyak",
+    "count": "{n} item",
+    "empty": {
+      "liked": "Belum ada konten yang disukai",
+      "saved": "Belum ada konten yang disimpan",
+      "subscribed": "Kamu belum mengikuti kreator apapun",
+      "all": "Belum ada konten"
+    },
+    "countries": {
+      "TH": "Thailand",
+      "VN": "Vietnam",
+      "ID": "Indonesia"
+    }
+  },
+  "card": {
+    "original": "Asli",
+    "like": "Suka",
+    "unlike": "Batal suka",
+    "save": "Simpan",
+    "unsave": "Hapus simpanan"
+  },
+  "notifications": {
+    "title": "Notifikasi",
+    "empty": "Belum ada notifikasi"
+  },
+  "messages": {
+    "all": "Semua",
+    "priority": "Prioritas",
+    "unread": "Belum dibaca",
+    "noConversations": "Tidak ada percakapan",
+    "selectConversation": "Pilih percakapan untuk mulai chat",
+    "tipLabel": "Jumlah tip NT$",
+    "tipButton": "Tip",
+    "send": "Kirim",
+    "inputPlaceholder": "Ketik pesan..."
+  },
+  "creator": {
+    "posts": "Postingan",
+    "subscribers": "Pelanggan",
+    "likes": "Suka",
+    "showMore": "Tampilkan lebih",
+    "collapse": "Tutup",
+    "noPosts": "Belum ada postingan",
+    "subscribeNow": "Langganan sekarang",
+    "unlockSingle": "Buka postingan ini",
+    "free": "Gratis",
+    "perMonth": "bln",
+    "locked": "Langganan untuk membuka",
+    "audience": {
+      "public": "Publik",
+      "subscribers": "Pelanggan saja",
+      "premium": "Premium saja",
+      "private": "Pribadi"
+    }
+  },
+  "profile": {
+    "title": "Pengaturan",
+    "nickname": "Nama panggilan",
+    "nationality": "Kewarganegaraan",
+    "bio": "Bio",
+    "bioPlaceholder": "Ceritakan tentang dirimu...",
+    "avatar": "Foto profil",
+    "banner": "Sampul",
+    "save": "Simpan perubahan",
+    "saved": "Tersimpan!",
+    "deleteAccount": "Hapus akun",
+    "deleteConfirm": "Yakin? Tindakan ini tidak bisa dibatalkan.",
+    "deleteConfirmButton": "Konfirmasi hapus",
+    "cancel": "Batal",
+    "creatorLocked": "Jadi kreator untuk membuka",
+    "becomeCreator": "Daftar jadi kreator",
+    "payout": "Pengaturan pembayaran",
+    "payoutDesc": "Atur akun pembayaran untuk menerima penghasilan langganan"
+  },
+  "post": {
+    "title": "Postingan baru",
+    "back": "Kembali",
+    "titleLabel": "Judul",
+    "titlePlaceholder": "Judul postingan (opsional)",
+    "contentPlaceholder": "Bagikan kontenmu...",
+    "schedule": "Jadwalkan",
+    "audience": "Penonton",
+    "copyright": "Hak cipta",
+    "publish": "Posting",
+    "audiences": {
+      "public": "Publik",
+      "subscribers": "Pelanggan saja",
+      "premium": "Premium saja",
+      "private": "Pribadi"
+    },
+    "copyrights": {
+      "original": "Konten asli",
+      "cc-by": "CC BY",
+      "cc-by-nc": "CC BY-NC",
+      "all-rights-reserved": "Semua hak dilindungi"
+    }
+  }
+}

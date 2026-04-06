@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(pkill -f \"next dev\")",
+      "WebFetch(domain:www.tiktok.com)",
+      "WebSearch",
+      "Bash(curl:*)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:graph.facebook.com)",
+      "WebFetch(domain:online.hitpaw.com)",
+      "Bash(npx playwright:*)",
+      "Bash(npx next:*)",
+      "Bash(npx tsc:*)"
+    ]
+  },
+  "prefersReducedMotion": false
+}

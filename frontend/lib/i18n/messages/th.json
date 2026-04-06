@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "home": "หน้าแรก",
+    "messages": "ข้อความ",
+    "notifications": "การแจ้งเตือน",
+    "profile": "โปรไฟล์",
+    "login": "เข้าสู่ระบบ",
+    "subscribe": "ติดตาม",
+    "language": "ภาษา",
+    "back": "ย้อนกลับ",
+    "close": "ปิด"
+  },
+  "sidebar": {
+    "personalize": "ปรับแต่งส่วนตัว",
+    "search": "ค้นหา",
+    "post": "โพสต์",
+    "liked": "ที่ชอบ",
+    "saved": "ที่บันทึก",
+    "subscribed": "โพสต์จากที่ติดตาม",
+    "recommended": "ครีเอเตอร์แนะนำ",
+    "searchPlaceholder": "ค้นหาครีเอเตอร์ เนื้อหา...",
+    "searchHint": "ค้นหา \"{query}\" (ฟีเจอร์นี้กำลังพัฒนา)",
+    "sidebarSubscribe": "ติดตาม"
+  },
+  "feed": {
+    "latest": "เนื้อหาล่าสุด",
+    "liked": "ที่ฉันชอบ",
+    "saved": "ที่บันทึกไว้",
+    "subscribed": "โพสต์ที่ติดตาม",
+    "all": "ทั้งหมด",
+    "loadMore": "โหลดเพิ่มเติม",
+    "count": "{n} รายการ",
+    "empty": {
+      "liked": "ยังไม่มีเนื้อหาที่ชอบ",
+      "saved": "ยังไม่มีเนื้อหาที่บันทึก",
+      "subscribed": "คุณยังไม่ได้ติดตามครีเอเตอร์ใด",
+      "all": "ยังไม่มีเนื้อหา"
+    },
+    "countries": {
+      "TH": "ไทย",
+      "VN": "เวียดนาม",
+      "ID": "อินโดนีเซีย"
+    }
+  },
+  "card": {
+    "original": "ต้นฉบับ",
+    "like": "ถูกใจ",
+    "unlike": "ยกเลิกถูกใจ",
+    "save": "บันทึก",
+    "unsave": "ยกเลิกบันทึก"
+  },
+  "notifications": {
+    "title": "การแจ้งเตือน",
+    "empty": "ยังไม่มีการแจ้งเตือน"
+  },
+  "messages": {
+    "all": "ทั้งหมด",
+    "priority": "สำคัญ",
+    "unread": "ยังไม่ได้อ่าน",
+    "noConversations": "ไม่มีการสนทนา",
+    "selectConversation": "เลือกการสนทนาเพื่อเริ่มแชท",
+    "tipLabel": "จำนวนทิป NT$",
+    "tipButton": "ทิป",
+    "send": "ส่ง",
+    "inputPlaceholder": "พิมพ์ข้อความ..."
+  },
+  "creator": {
+    "posts": "โพสต์",
+    "subscribers": "ผู้ติดตาม",
+    "likes": "ถูกใจ",
+    "showMore": "แสดงเพิ่มเติม",
+    "collapse": "ย่อ",
+    "noPosts": "ยังไม่มีโพสต์",
+    "subscribeNow": "ติดตามเลย",
+    "unlockSingle": "ปลดล็อกโพสต์นี้",
+    "free": "ฟรี",
+    "perMonth": "เดือน",
+    "locked": "ติดตามเพื่อปลดล็อก",
+    "audience": {
+      "public": "สาธารณะ",
+      "subscribers": "เฉพาะผู้ติดตาม",
+      "premium": "เฉพาะพรีเมียม",
+      "private": "ส่วนตัว"
+    }
+  },
+  "profile": {
+    "title": "ตั้งค่า",
+    "nickname": "ชื่อเล่น",
+    "nationality": "สัญชาติ",
+    "bio": "แนะนำตัว",
+    "bioPlaceholder": "แนะนำตัวเอง...",
+    "avatar": "รูปโปรไฟล์",
+    "banner": "ภาพปก",
+    "save": "บันทึกการตั้งค่า",
+    "saved": "บันทึกแล้ว!",
+    "deleteAccount": "ลบบัญชี",
+    "deleteConfirm": "แน่ใจหรือไม่? ไม่สามารถยกเลิกได้",
+    "deleteConfirmButton": "ยืนยันการลบ",
+    "cancel": "ยกเลิก",
+    "creatorLocked": "เป็นครีเอเตอร์เพื่อปลดล็อก",
+    "becomeCreator": "สมัครเป็นครีเอเตอร์",
+    "payout": "ตั้งค่าการรับเงิน",
+    "payoutDesc": "ตั้งค่าบัญชีรับเงินเพื่อรับรายได้จากการติดตาม"
+  },
+  "post": {
+    "title": "โพสต์ใหม่",
+    "back": "ย้อนกลับ",
+    "titleLabel": "หัวข้อ",
+    "titlePlaceholder": "หัวข้อโพสต์ (ไม่บังคับ)",
+    "contentPlaceholder": "แชร์เนื้อหาของคุณ...",
+    "schedule": "ตั้งเวลา",
+    "audience": "ผู้ชม",
+    "copyright": "ลิขสิทธิ์",
+    "publish": "โพสต์",
+    "audiences": {
+      "public": "สาธารณะ",
+      "subscribers": "เฉพาะผู้ติดตาม",
+      "premium": "เฉพาะพรีเมียม",
+      "private": "ส่วนตัว"
+    },
+    "copyrights": {
+      "original": "เนื้อหาต้นฉบับ",
+      "cc-by": "CC BY",
+      "cc-by-nc": "CC BY-NC",
+      "all-rights-reserved": "สงวนลิขสิทธิ์"
+    }
+  }
+}
