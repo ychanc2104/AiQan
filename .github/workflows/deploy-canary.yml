@@ -5,6 +5,9 @@ on:
     branches: [canary]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
   group: deploy-canary
   cancel-in-progress: true
