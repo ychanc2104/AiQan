@@ -187,19 +187,19 @@ function NotifDropdown() {
 
 export default function Header() {
   const t = useT()
-  const [menuOpen, setMenuOpen] = useState(false)
 
   const navItems = [
-    { label: t('nav.home'),     href: '/home' },
-    { label: t('nav.messages'), href: '/messages' },
-    { label: t('nav.profile'),  href: '/profile' },
+    { label: t('nav.subscribe'), href: '/profile' },
+    { label: t('nav.home'),      href: '/home' },
+    { label: t('nav.messages'),  href: '/messages' },
+    { label: t('nav.profile'),   href: '/profile' },
   ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 h-14 transition-colors">
-      <div className="flex items-center justify-between px-4 h-full max-w-screen-xl mx-auto">
+      <div className="flex items-center px-4 h-full max-w-screen-xl mx-auto gap-3">
         {/* Logo */}
-        <Link href="/home" className="flex items-center gap-2">
+        <Link href="/home" className="flex items-center gap-2 flex-shrink-0">
           <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-sm">A</span>
           </div>
@@ -207,12 +207,12 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-6 flex-1 justify-center">
           {navItems.map((item) => (
             <Link
-              key={item.href}
+              key={item.href + item.label}
               href={item.href}
-              className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+              className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium whitespace-nowrap"
             >
               {item.label}
             </Link>
@@ -221,55 +221,31 @@ export default function Header() {
         </nav>
 
         {/* Desktop right actions */}
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden md:flex items-center gap-2 ml-auto">
           <ThemeToggle />
           <LangSwitcher />
-          <button className="text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium px-2">
-            {t('nav.login')}
-          </button>
-          <button className="text-sm bg-blue-600 text-white px-4 py-1.5 rounded-full hover:bg-blue-700 transition-colors font-medium">
-            {t('nav.subscribe')}
-          </button>
         </div>
 
-        {/* Mobile right actions */}
-        <div className="md:hidden flex items-center gap-1">
-          <ThemeToggle />
-          <button
-            className="p-2 text-gray-600 dark:text-gray-400"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="開啟選單"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {menuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile dropdown */}
-      {menuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 px-4 py-3 flex flex-col gap-3">
-          {[...navItems, { label: t('nav.notifications'), href: '/notifications' }].map((item) => (
+        {/* Mobile: scrollable nav */}
+        <nav className="md:hidden flex items-center flex-1 overflow-x-auto scrollbar-none gap-1">
+          {navItems.map((item) => (
             <Link
-              key={item.href}
+              key={item.href + item.label}
               href={item.href}
-              className="text-sm text-gray-700 dark:text-gray-300 font-medium py-1"
-              onClick={() => setMenuOpen(false)}
+              className="flex-shrink-0 text-xs text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800 whitespace-nowrap"
             >
               {item.label}
             </Link>
           ))}
+          <NotifDropdown />
+        </nav>
+
+        {/* Mobile right: theme + lang */}
+        <div className="md:hidden flex items-center gap-1 flex-shrink-0">
+          <ThemeToggle />
           <LangSwitcher />
-          <button className="text-sm bg-blue-600 text-white px-4 py-2 rounded-full font-medium mt-1">
-            {t('nav.subscribe')}
-          </button>
         </div>
-      )}
+      </div>
     </header>
   )
 }

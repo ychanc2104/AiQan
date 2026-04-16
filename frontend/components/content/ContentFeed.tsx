@@ -30,16 +30,16 @@ export default function ContentFeed({ filter = 'all' }: ContentFeedProps) {
   return (
     <>
       {/* ── Mobile feed: snap scroll ─────────────────────────────────────── */}
-      <div className="md:hidden overflow-y-scroll snap-y snap-mandatory h-[calc(100dvh-56px)] scrollbar-none bg-black">
+      {/* Mobile: snap scroll — full screen minus header(56) + action bar(44) = 100px */}
+      <div className="md:hidden overflow-y-scroll snap-y snap-mandatory h-[calc(100dvh-100px)] scrollbar-none bg-black">
         {loading ? (
-          // Skeleton fills one full screen
-          <div className="snap-start flex flex-col h-[calc(100dvh-56px-56px)] bg-black animate-pulse">
+          <div className="snap-start flex flex-col h-[calc(100dvh-100px)] bg-black animate-pulse">
             <div className="flex-1 bg-gray-800" />
             <div className="h-10 bg-gray-900 px-4 py-2" />
             <div className="h-8 bg-gray-900 px-4 pb-3" />
           </div>
         ) : contents.length === 0 ? (
-          <div className="snap-start flex items-center justify-center h-[calc(100dvh-56px-56px)] text-gray-500">
+          <div className="snap-start flex items-center justify-center h-[calc(100dvh-100px)] text-gray-500">
             <div className="text-center">
               <div className="text-4xl mb-3">
                 {filter === 'liked' ? '❤️' : filter === 'saved' ? '🔖' : filter === 'subscribed' ? '⭐' : '📭'}
