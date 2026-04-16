@@ -147,5 +147,38 @@
       "cc-by-nc": "CC BY-NC",
       "all-rights-reserved": "Bảo lưu mọi quyền"
     }
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "heading": "Tham gia AiQan",
+    "sectionSubscription": "Đăng ký",
+    "sectionUser": "Người dùng",
+    "sectionCreator": "Creator",
+    "q1": "Cách theo dõi hoặc đăng ký",
+    "a1": "Nhấn nút 'Theo dõi' trên trang creator. Hỗ trợ gói tháng hoặc mở khóa từng bài.",
+    "q2": "Cách hủy đăng ký",
+    "a2": "Vào Cài đặt → Quản lý đăng ký để hủy. Có hiệu lực vào chu kỳ thanh toán tiếp theo, không hoàn tiền.",
+    "q3": "Các phương thức thanh toán được hỗ trợ",
+    "a3": "Thẻ tín dụng, LINE Pay, JKoPay và thanh toán tại cửa hàng tiện lợi (7-11, FamilyMart).",
+    "q4": "Thanh toán cửa hàng tiện lợi có thể bị chậm",
+    "a4": "Xác nhận mất 1–2 ngày làm việc sau khi thanh toán. Đăng ký tự động kích hoạt sau khi xác nhận.",
+    "q5": "Lợi ích khi là người dùng",
+    "a5": "Theo dõi creator miễn phí, xem nội dung công khai, mở khóa nội dung trả phí và gửi ủng hộ.",
+    "q6": "Sự cố phát video",
+    "a6": "Kiểm tra kết nối mạng. Nếu vẫn lỗi, hãy thử đổi trình duyệt hoặc xóa bộ nhớ cache.",
+    "q7": "Nguyên tắc tôn trọng lẫn nhau",
+    "a7": "Tất cả người dùng phải cư xử tôn trọng. Quấy rối hoặc ngôn ngữ thù địch có thể bị tạm khóa tài khoản.",
+    "q8": "Cách trở thành creator",
+    "a8": "Vào Cài đặt → Trở thành Creator, điền đơn và chờ xét duyệt 3–5 ngày làm việc.",
+    "q9": "Lợi ích khi là creator",
+    "a9": "Đăng nội dung công khai hoặc trả phí, nhận 80% doanh thu, sử dụng công cụ nhắn tin và chặn người dùng.",
+    "q10": "Sự cố tải lên hình ảnh hoặc video",
+    "a10": "Định dạng hỗ trợ: JPG / PNG / MP4. Kích thước tối đa: 500MB. Đảm bảo kết nối ổn định trước khi thử lại.",
+    "q11": "Chương trình chia sẻ doanh thu 80/20, không có phí xử lý thanh toán",
+    "a11": "Creator nhận 80% từ mỗi giao dịch. AiQan giữ 20% phí dịch vụ, không có thêm phí xử lý thanh toán.",
+    "q12": "Creator nhận doanh thu khi nào",
+    "a12": "Thanh toán hàng tháng, chuyển khoản trước ngày 15 tháng sau. Số tiền tối thiểu để rút: NT$500.",
+    "q13": "Tính năng chặn và nhắn tin riêng",
+    "a13": "Creator có thể chặn người dùng để ngăn đăng ký hoặc nhắn tin. Người dùng cũng có thể chặn lẫn nhau."
   }
 }

@@ -147,5 +147,38 @@
       "cc-by-nc": "CC BY-NC",
       "all-rights-reserved": "All rights reserved"
     }
+  },
+  "faq": {
+    "title": "FAQ",
+    "heading": "Join AiQan",
+    "sectionSubscription": "Subscriptions",
+    "sectionUser": "Users",
+    "sectionCreator": "Creators",
+    "q1": "How to follow or subscribe",
+    "a1": "Click the Subscribe button on a creator's page. Supports monthly plans or single-post unlocks.",
+    "q2": "How to cancel a subscription",
+    "a2": "Go to Settings → Subscription Management to cancel. Takes effect at the next billing cycle; no refund for the current period.",
+    "q3": "Supported payment methods",
+    "a3": "We support credit cards, LINE Pay, JKoPay, and convenience store payments (7-11, FamilyMart).",
+    "q4": "Convenience store payment delay",
+    "a4": "Allow 1–2 business days for convenience store payments to be confirmed. Your subscription activates automatically once confirmed.",
+    "q5": "Benefits of joining as a user",
+    "a5": "Follow creators for free, browse public content, unlock paid content with a subscription, and send tips.",
+    "q6": "Video playback issues",
+    "a6": "Check your internet connection. If the problem persists, try a different browser or clear your cache.",
+    "q7": "Mutual respect policy",
+    "a7": "All users must maintain respectful conduct. Harassment, discrimination, or abusive language may result in account suspension.",
+    "q8": "How to become a creator",
+    "a8": "Go to Settings → Become a Creator, fill in the application, and wait 3–5 business days for approval. Once approved, you can publish paid content.",
+    "q9": "Benefits of being a creator",
+    "a9": "Publish public or paid content, earn 80% revenue share, and use creator tools like DMs and user blocking.",
+    "q10": "Image or video upload issues",
+    "a10": "Supported formats: JPG / PNG / MP4. Max file size: 500MB. Ensure a stable connection before retrying.",
+    "q11": "80/20 revenue split with no payment processing fee",
+    "a11": "Creators keep 80% of each transaction. AiQan takes 20% as a service fee with no additional payment processing charges.",
+    "q12": "When do creators receive their payout",
+    "a12": "Payouts are processed monthly and deposited by the 15th of the following month. Minimum withdrawal: NT$500.",
+    "q13": "Blocking and direct messages",
+    "a13": "Creators can block users to prevent subscriptions or DMs. Users can also block each other."
   }
 }

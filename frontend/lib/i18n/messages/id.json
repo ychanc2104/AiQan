@@ -147,5 +147,38 @@
       "cc-by-nc": "CC BY-NC",
       "all-rights-reserved": "Semua hak dilindungi"
     }
+  },
+  "faq": {
+    "title": "Pertanyaan Umum",
+    "heading": "Bergabung dengan AiQan",
+    "sectionSubscription": "Langganan",
+    "sectionUser": "Pengguna",
+    "sectionCreator": "Kreator",
+    "q1": "Cara mengikuti atau berlangganan",
+    "a1": "Klik tombol 'Ikuti' di halaman kreator. Tersedia paket bulanan atau buka postingan satu per satu.",
+    "q2": "Cara membatalkan langganan",
+    "a2": "Buka Pengaturan → Kelola Langganan lalu batalkan. Berlaku pada siklus tagihan berikutnya, tidak ada pengembalian dana.",
+    "q3": "Metode pembayaran yang didukung",
+    "a3": "Kartu kredit, LINE Pay, JKoPay, dan pembayaran di minimarket (7-11, FamilyMart).",
+    "q4": "Pembayaran minimarket mungkin tertunda",
+    "a4": "Konfirmasi membutuhkan 1–2 hari kerja setelah pembayaran. Langganan aktif otomatis setelah dikonfirmasi.",
+    "q5": "Keuntungan menjadi pengguna",
+    "a5": "Ikuti kreator secara gratis, lihat konten publik, buka konten premium dengan berlangganan, dan kirim tip.",
+    "q6": "Masalah pemutaran video",
+    "a6": "Periksa koneksi internet. Jika masalah berlanjut, coba ganti browser atau hapus cache.",
+    "q7": "Prinsip saling menghormati",
+    "a7": "Semua pengguna wajib bersikap saling menghormati. Pelecehan atau ujaran kebencian dapat mengakibatkan penangguhan akun.",
+    "q8": "Cara menjadi kreator",
+    "a8": "Buka Pengaturan → Menjadi Kreator, isi formulir, dan tunggu persetujuan 3–5 hari kerja.",
+    "q9": "Keuntungan menjadi kreator",
+    "a9": "Publikasikan konten publik atau berbayar, dapatkan 80% dari pendapatan, dan gunakan fitur DM serta pemblokiran.",
+    "q10": "Masalah unggah gambar atau video",
+    "a10": "Format yang didukung: JPG / PNG / MP4. Ukuran maks: 500MB. Pastikan koneksi stabil sebelum mencoba lagi.",
+    "q11": "Program bagi hasil 80/20 tanpa biaya payment gateway",
+    "a11": "Kreator mendapat 80% dari setiap transaksi. AiQan mengambil 20% sebagai biaya layanan tanpa biaya tambahan.",
+    "q12": "Kapan kreator menerima pembayaran",
+    "a12": "Pembayaran diproses bulanan dan ditransfer sebelum tanggal 15 bulan berikutnya. Minimum penarikan: NT$500.",
+    "q13": "Fitur blokir dan pesan langsung",
+    "a13": "Kreator dapat memblokir pengguna untuk mencegah langganan atau DM. Pengguna juga dapat memblokir satu sama lain."
   }
 }

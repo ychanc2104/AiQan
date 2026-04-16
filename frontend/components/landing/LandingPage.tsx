@@ -224,7 +224,7 @@ function Footer() {
               <ul className="space-y-2 text-sm">
                 <li><Link href="/" className="hover:text-white transition-colors">{t('landing.footerWelcome')}</Link></li>
                 <li><Link href="/home" className="hover:text-white transition-colors">{t('landing.footerHome')}</Link></li>
-                <li><Link href="#" className="hover:text-white transition-colors">{t('landing.footerFaq')}</Link></li>
+                <li><Link href="/faq" className="hover:text-white transition-colors">{t('landing.footerFaq')}</Link></li>
               </ul>
             </div>
             <div>
