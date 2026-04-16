@@ -190,7 +190,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const navItems = [
-    { label: t('nav.home'),     href: '/' },
+    { label: t('nav.home'),     href: '/home' },
     { label: t('nav.messages'), href: '/messages' },
     { label: t('nav.profile'),  href: '/profile' },
   ]
@@ -199,11 +199,11 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 h-14 transition-colors">
       <div className="flex items-center justify-between px-4 h-full max-w-screen-xl mx-auto">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/home" className="flex items-center gap-2">
           <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">S</span>
+            <span className="text-white font-bold text-sm">A</span>
           </div>
-          <span className="font-bold text-gray-900 dark:text-white text-lg tracking-tight">SubSpark</span>
+          <span className="font-bold text-gray-900 dark:text-white text-lg tracking-tight">AiQan</span>
         </Link>
 
         {/* Desktop nav */}
