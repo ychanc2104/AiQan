@@ -3,8 +3,8 @@ import { Providers } from './providers'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'SubSpark — 在台東南亞影音平台',
-  description: '為在台灣的東南亞朋友打造的訂閱制影音聚合平台',
+  title: 'AiQan',
+  description: 'AiQan',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
