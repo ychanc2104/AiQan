@@ -145,11 +145,14 @@ function PostCard({ post }: { post: CreatorPost }) {
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 
+type PostTab = 'all' | 'general' | 'paid'
+
 export default function CreatorPage({ id }: { id: string }) {
   const [creator, setCreator] = useState<CreatorProfile | null>(null)
   const [posts, setPosts] = useState<CreatorPost[]>([])
   const [bioExpanded, setBioExpanded] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [postTab, setPostTab] = useState<PostTab>('all')
 
   useEffect(() => {
     Promise.all([getCreatorProfile(id), getCreatorPosts(id)]).then(([c, p]) => {
@@ -256,12 +259,38 @@ export default function CreatorPage({ id }: { id: string }) {
                 </div>
               </div>
 
+              {/* Post tabs */}
+              <div className="flex gap-6 border-b border-gray-200 dark:border-gray-800 mb-4">
+                {([
+                  { key: 'general', label: '一般貼文' },
+                  { key: 'paid',    label: '單篇付費' },
+                  { key: 'all',     label: '全部' },
+                ] as { key: PostTab; label: string }[]).map(tab => (
+                  <button
+                    key={tab.key}
+                    onClick={() => setPostTab(tab.key)}
+                    className={`pb-2.5 text-sm font-medium transition-colors border-b-2 -mb-px ${
+                      postTab === tab.key
+                        ? 'border-red-500 text-gray-900 dark:text-white'
+                        : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'
+                    }`}
+                  >
+                    {tab.label}
+                  </button>
+                ))}
+              </div>
+
               {/* Posts */}
-              {posts.length === 0 ? (
-                <p className="text-center text-sm text-gray-400 py-12">尚無貼文</p>
-              ) : (
-                posts.map(post => <PostCard key={post.id} post={post} />)
-              )}
+              {(() => {
+                const filtered = posts.filter(p =>
+                  postTab === 'general' ? p.audience === 'public' :
+                  postTab === 'paid'    ? p.audience !== 'public' :
+                  true
+                )
+                return filtered.length === 0
+                  ? <p className="text-center text-sm text-gray-400 py-12">尚無貼文</p>
+                  : filtered.map(post => <PostCard key={post.id} post={post} />)
+              })()}
             </div>
           </main>
         </div>
