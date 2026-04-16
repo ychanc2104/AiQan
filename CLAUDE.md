@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-AiQan is a subscription-based video aggregation platform for Southeast Asian communities in Taiwan (migrant workers, new residents, international students). It aggregates content from TikTok, YouTube, and Instagram. Currently only the frontend is implemented; the backend (FastAPI + Supabase) is designed but not yet built — see `design.md` for the full spec.
+AiQan is a subscription-based creator platform built on the concept of **"any online human interaction can be subscribed to"** — covering micro-services and emotional economy (e.g. voice companions, virtual partners, study buddies, itinerary planning, one-time professional consultations, knowledge sharing). Initial market is Southeast Asian communities in Taiwan (migrant workers, new residents, international students); expanding to general Taiwan users and Southeast Asian local markets. Currently only the frontend is implemented; the backend (FastAPI + Supabase) is designed but not yet built — see `design.md` for the full spec.
 
 ## Commands
 
