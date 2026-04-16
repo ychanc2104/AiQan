@@ -48,3 +48,4 @@ jobs:
           clean-exclude: |
             staging
             canary
+            .nojekyll
