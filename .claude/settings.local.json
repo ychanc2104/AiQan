@@ -13,7 +13,17 @@
       "WebFetch(domain:online.hitpaw.com)",
       "Bash(npx playwright:*)",
       "Bash(npx next:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(git add *)",
+      "Bash(export PATH=\"/opt/homebrew/bin:$PATH\")",
+      "Bash(pdftoppm -png -r 120 \"/Users/ychang11/projects/specs/登入後畫面＿網頁版.pdf\" /tmp/web_spec)",
+      "Read(//private/tmp/**)",
+      "Bash(docker compose *)",
+      "Bash(python3 -c \"import ast; [ast.parse\\(open\\(f\\).read\\(\\)\\) for f in ['app/routers/interactions.py', 'app/routers/feed.py', 'app/routers/creators.py', 'app/main.py', 'app/models/schemas.py']]\")",
+      "Bash(python3 -c \"import ast; [ast.parse\\(open\\(f\\).read\\(\\)\\) for f in ['app/routers/subscriptions.py', 'app/routers/feed.py', 'app/routers/creators.py', 'app/main.py', 'app/models/schemas.py']]\")",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 *)",
+      "Bash(docker exec *)"
     ]
   },
   "prefersReducedMotion": false

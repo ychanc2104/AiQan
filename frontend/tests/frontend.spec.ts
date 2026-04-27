@@ -146,38 +146,16 @@ test('dark mode toggle switches back to light mode', async ({ page }) => {
 })
 
 // ─────────────────────────────────────────────────────────────────────────────
-// 4. Embeds (/home)
+// 4. Native posts (/home)
 // ─────────────────────────────────────────────────────────────────────────────
-test('YouTube embed uses autoplay=1 when in viewport', async ({ page }) => {
+test('home page shows native user posts without external embeds', async ({ page }) => {
   await page.goto('/home')
   await page.waitForLoadState('domcontentloaded')
 
-  await page.evaluate(() =>
-    document.querySelector('iframe[src*="youtube"]')?.scrollIntoView({ behavior: 'instant', block: 'center' })
-  )
+  await expect(page.locator('iframe[src*="youtube.com/embed"]')).toHaveCount(0)
+  await expect(page.locator('.tiktok-embed')).toHaveCount(0)
+  await expect(page.locator('iframe[src*="instagram.com"]')).toHaveCount(0)
 
-  await page.waitForTimeout(1500)
-
-  const ytFrame = page.locator('iframe[src*="youtube.com/embed"]').first()
-  await expect(ytFrame).toBeVisible({ timeout: 8_000 })
-
-  const src = await ytFrame.getAttribute('src')
-  expect(src).toContain('autoplay=1')
-})
-
-test('TikTok blockquote embeds are present in DOM', async ({ page }) => {
-  await page.goto('/home')
-  await page.waitForLoadState('domcontentloaded')
-
-  const embeds = page.locator('.tiktok-embed')
-  await expect(embeds.first()).toBeAttached({ timeout: 8_000 })
-  expect(await embeds.count()).toBeGreaterThan(0)
-})
-
-test('Instagram iframe is present', async ({ page }) => {
-  await page.goto('/home')
-  await page.waitForLoadState('domcontentloaded')
-
-  const igFrame = page.locator('iframe[src*="instagram.com"]').first()
-  await expect(igFrame).toBeAttached({ timeout: 8_000 })
+  const cards = page.locator('[data-testid="content-card"]')
+  await expect(cards.first()).toContainText('今天下班後在台北車站附近找到一間超好吃的越南河粉')
 })

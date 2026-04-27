@@ -1,4 +1,4 @@
-export type Platform = 'tiktok' | 'youtube' | 'instagram'
+export type Platform = 'tiktok' | 'youtube' | 'instagram' | 'post'
 
 export interface Creator {
   name: string
@@ -10,116 +10,79 @@ export interface Creator {
 export interface Content {
   id: string
   platform: Platform
-  videoId: string
+  videoId?: string
   creator: Creator
   description: string
-  originalUrl: string
+  originalUrl?: string
   views: string
   likes: string
   saves: string
   isPremium: boolean
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// TikTok  → videoId 從 URL 尾端數字取得
-// YouTube → videoId 從 youtube.com/watch?v= 或 /shorts/ 後面取得 (11碼)
-// Instagram → reelId 從 instagram.com/reel/{ID}/ 取得
-// ─────────────────────────────────────────────────────────────────────────────
 export const mockContents: Content[] = [
-  // ── TikTok ──────────────────────────────────────────────────────────────
   {
-    id: 'tt-1',
-    platform: 'tiktok',
-    // ✅ verified — Thai viral dance "Thammada" 46M views
-    videoId: '7549079772299676936',
-    creator: { name: 'The Smart Local TH', handle: '@thesmartlocalth', country: 'TH', avatarColor: 'bg-orange-400' },
-    description: 'เด็กไทยดังใหญ่กับท่าเต้นสุดแนว! เพลง "ธรรมดา" ของ DJ KING DRAGON 🔥 #ไทย #viral',
-    originalUrl: 'https://www.tiktok.com/@thesmartlocalth/video/7549079772299676936',
-    views: '46M', likes: '3.2M', saves: '890K',
+    id: 'post-1',
+    platform: 'post',
+    creator: { name: '王小婷', handle: '@ting_life', country: 'TW', avatarColor: 'bg-orange-400' },
+    description: '今天下班後在台北車站附近找到一間超好吃的越南河粉，湯頭很清爽，推薦給大家。',
+    views: '1.2K', likes: '186', saves: '42',
     isPremium: false,
   },
   {
-    id: 'tt-2',
-    platform: 'tiktok',
-    // ✅ verified — Thai dubbed Korean drama
-    videoId: '7502734945576553735',
-    creator: { name: '🎞PhingPhing Series🎬', handle: '@phingphing.series', country: 'TH', avatarColor: 'bg-purple-500' },
-    description: 'บอสตัวร้าย นายยอดรัก พากย์ไทย 🇹🇭 #ซีรี่ย์เกาหลี #พากย์ไทย',
-    originalUrl: 'https://www.tiktok.com/@phingphing.series/video/7502734945576553735',
-    views: '1.8M', likes: '210K', saves: '67K',
+    id: 'post-2',
+    platform: 'post',
+    creator: { name: 'Nguyen Minh', handle: '@minh.study', country: 'VN', avatarColor: 'bg-purple-500' },
+    description: '這週整理了 5 個在台灣找工作面試會用到的中文句型，需要的人我可以再分享完整筆記。',
+    views: '980', likes: '143', saves: '57',
     isPremium: true,
   },
   {
-    id: 'tt-3',
-    platform: 'tiktok',
-    // ✅ verified — Bella Poarch (Filipino), most viewed TikTok ever
-    videoId: '6862153058223197445',
-    creator: { name: 'Bella Poarch', handle: '@bellapoarch', country: 'PH', avatarColor: 'bg-pink-400' },
-    description: 'To the 🐝🐝🐝 M to the B #fyp #music #viral',
-    originalUrl: 'https://www.tiktok.com/@bellapoarch/video/6862153058223197445',
-    views: '61M', likes: '14M', saves: '2.3M',
+    id: 'post-3',
+    platform: 'post',
+    creator: { name: 'Siti Rahma', handle: '@siti_cook', country: 'ID', avatarColor: 'bg-pink-400' },
+    description: '晚餐做了印尼炒飯加半熟蛋，10 分鐘就完成，想看食譜我明天貼圖文版。',
+    views: '2.4K', likes: '321', saves: '88',
     isPremium: false,
   },
   {
-    id: 'tt-4',
-    platform: 'tiktok',
-    // ✅ verified — Calum Scott, Indonesia creator collab
-    videoId: '7343141257138457888',
-    creator: { name: 'Calum Scott', handle: '@calumscottofficial', country: 'ID', avatarColor: 'bg-green-500' },
-    description: 'Thanks for having me @YouTube ❤️ Shout out to Indonesian creators! 🇮🇩 #indonesia',
-    originalUrl: 'https://www.tiktok.com/@calumscottofficial/video/7343141257138457888',
-    views: '2.1M', likes: '312K', saves: '78K',
-    isPremium: false,
-  },
-
-  // ── YouTube Shorts ───────────────────────────────────────────────────────
-  {
-    id: 'yt-1',
-    platform: 'youtube',
-    // ✅ verified — PSY Gangnam Style (K-pop, hugely popular in SEA)
-    videoId: '9bZkp7q19f0',
-    creator: { name: 'officialpsy', handle: '@officialpsy', country: 'TH', avatarColor: 'bg-red-500' },
-    description: 'PSY - GANGNAM STYLE 강남스타일 🎵 #kpop #viral #dance',
-    originalUrl: 'https://www.youtube.com/watch?v=9bZkp7q19f0',
-    views: '5.1B', likes: '24M', saves: '8.2M',
+    id: 'post-4',
+    platform: 'post',
+    creator: { name: 'Maria Santos', handle: '@maria_notes', country: 'PH', avatarColor: 'bg-green-500' },
+    description: '今天第一次去台中歌劇院，建築真的很美，週末很適合帶朋友來散步拍照。',
+    views: '760', likes: '91', saves: '19',
     isPremium: false,
   },
   {
-    id: 'yt-2',
-    platform: 'youtube',
-    // ✅ verified — substitute with a real YouTube Shorts ID for best experience
-    // Current: Rick Astley Never Gonna Give You Up (test video)
-    videoId: 'xvFZjo5PgG0',
-    creator: { name: 'Rick Astley', handle: '@RickAstleyYT', country: 'MY', avatarColor: 'bg-blue-400' },
-    description: 'Never Gonna Give You Up 🎵 Replace this with a real YouTube Shorts ID!',
-    originalUrl: 'https://www.youtube.com/watch?v=xvFZjo5PgG0',
-    views: '1.5B', likes: '18M', saves: '3.1M',
-    isPremium: false,
-  },
-
-  // ── Instagram Reels ──────────────────────────────────────────────────────
-  // ⚠️  Instagram embeds may prompt login for logged-out users.
-  //     Replace reelId with public posts from your target creators.
-  {
-    id: 'ig-1',
-    platform: 'instagram',
-    // From search results — Indonesian viral content
-    videoId: 'DPviAwJEW-j',
-    creator: { name: 'Indonesian Creator', handle: '@creator.id', country: 'ID', avatarColor: 'bg-yellow-500' },
-    description: 'Indonesian viral video 🇮🇩 #indonesia #viral #reels',
-    originalUrl: 'https://www.instagram.com/reel/DPviAwJEW-j/',
-    views: '2.4M', likes: '180K', saves: '45K',
+    id: 'post-5',
+    platform: 'post',
+    creator: { name: 'Arif Hidayat', handle: '@arif.travel', country: 'MY', avatarColor: 'bg-red-500' },
+    description: '分享一個超省錢的兩天一夜台南行程，交通、住宿和美食總花費不到 2500。',
+    views: '3.1K', likes: '402', saves: '173',
     isPremium: false,
   },
   {
-    id: 'ig-2',
-    platform: 'instagram',
-    // From search results — Indonesian viral content
-    videoId: 'DNh3KZEyoyY',
-    creator: { name: 'Indonesian Creator', handle: '@creator.id2', country: 'ID', avatarColor: 'bg-pink-500' },
-    description: 'Popular Indonesian content 🇮🇩 #indonesia #trending',
-    originalUrl: 'https://www.instagram.com/reel/DNh3KZEyoyY/',
-    views: '1.1M', likes: '95K', saves: '22K',
+    id: 'post-6',
+    platform: 'post',
+    creator: { name: '林志宇', handle: '@zuyu.tech', country: 'TW', avatarColor: 'bg-blue-400' },
+    description: '剛把履歷改成「作品導向」版本，面試邀約明顯變多，有需要範本可以私訊我。',
+    views: '1.5K', likes: '267', saves: '110',
+    isPremium: false,
+  },
+  {
+    id: 'post-7',
+    platform: 'post',
+    creator: { name: 'Mai Phan', handle: '@mai.voice', country: 'VN', avatarColor: 'bg-yellow-500' },
+    description: '今晚 9 點會開語音房陪讀 1 小時，主題是英文口說暖身，歡迎一起來。',
+    views: '640', likes: '74', saves: '28',
+    isPremium: false,
+  },
+  {
+    id: 'post-8',
+    platform: 'post',
+    creator: { name: 'Nong Fah', handle: '@nongfah', country: 'TH', avatarColor: 'bg-pink-500' },
+    description: '這個月會分享 3 篇「新住民在台生活」系列，第一篇先聊租屋避雷重點。',
+    views: '1.1K', likes: '158', saves: '49',
     isPremium: true,
   },
 ]
@@ -132,4 +95,5 @@ export const platformMeta: Record<Platform, { label: string; color: string; dot:
   tiktok:    { label: 'TikTok',    color: 'bg-black text-white',              dot: 'bg-white' },
   youtube:   { label: 'YouTube',   color: 'bg-red-600 text-white',            dot: 'bg-white' },
   instagram: { label: 'Instagram', color: 'bg-gradient-to-r from-purple-500 to-pink-500 text-white', dot: 'bg-white' },
+  post:      { label: 'Post',      color: 'bg-blue-600 text-white',           dot: 'bg-white' },
 }

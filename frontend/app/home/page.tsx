@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Script from 'next/script'
 import Header from '@/components/layout/Header'
 import Sidebar from '@/components/layout/Sidebar'
 import MobileActionBar from '@/components/layout/MobileActionBar'
@@ -13,7 +12,6 @@ export default function HomePage() {
 
   return (
     <>
-      <Script src="https://www.tiktok.com/embed.js" strategy="lazyOnload" />
       <Header />
       <MobileActionBar activeFilter={filter} onFilterChange={setFilter} />
 

@@ -203,7 +203,7 @@ function CTASection() {
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
 
-function Footer() {
+function Footer({ onOpenAbout }: { onOpenAbout: () => void }) {
   const t = useT()
   return (
     <footer className="bg-gray-900 text-gray-400 mt-0">
@@ -230,6 +230,15 @@ function Footer() {
             <div>
               <h3 className="text-white font-semibold mb-3 text-sm">{t('landing.footerLinks')}</h3>
               <ul className="space-y-2 text-sm">
+                <li>
+                  <button
+                    type="button"
+                    onClick={onOpenAbout}
+                    className="hover:text-white transition-colors"
+                  >
+                    關於
+                  </button>
+                </li>
                 <li><Link href="#" className="hover:text-white transition-colors">{t('landing.footerPrivacy')}</Link></li>
                 <li><Link href="#" className="hover:text-white transition-colors">{t('landing.footerTerms')}</Link></li>
                 <li><Link href="#" className="hover:text-white transition-colors">{t('landing.footerRefund')}</Link></li>
@@ -252,10 +261,45 @@ function Footer() {
   )
 }
 
+function AboutModal({ open, onClose }: { open: boolean; onClose: () => void }) {
+  if (!open) return null
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4"
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-w-sm rounded-2xl bg-white dark:bg-gray-900 p-6 shadow-xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-start justify-between gap-4 mb-4">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">關於</h3>
+          <button
+            type="button"
+            onClick={onClose}
+            className="text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            aria-label="關閉"
+          >
+            關閉
+          </button>
+        </div>
+
+        <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+          <p className="font-medium text-gray-900 dark:text-white">聯絡資訊</p>
+          <p>0930960589</p>
+          <p>changtingchiu@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 // ─── Main Export ──────────────────────────────────────────────────────────────
 
 export default function LandingPage() {
   const t = useT()
+  const [aboutOpen, setAboutOpen] = useState(false)
 
   const features = [
     {
@@ -300,7 +344,8 @@ export default function LandingPage() {
         </div>
       </main>
 
-      <Footer />
+      <Footer onOpenAbout={() => setAboutOpen(true)} />
+      <AboutModal open={aboutOpen} onClose={() => setAboutOpen(false)} />
     </div>
   )
 }

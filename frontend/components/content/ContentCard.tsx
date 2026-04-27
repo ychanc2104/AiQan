@@ -9,6 +9,7 @@ import { useT } from '@/lib/i18n'
 export default function ContentCard({ content }: { content: Content }) {
   const [isLiked, setIsLiked] = useState(false)
   const [isSaved, setIsSaved] = useState(false)
+  const [isSubscribeOpen, setIsSubscribeOpen] = useState(false)
 
   // Re-trigger TikTok embed.js scan when card mounts
   useEffect(() => {
@@ -35,28 +36,71 @@ export default function ContentCard({ content }: { content: Content }) {
           platform={content.platform}
           videoId={content.videoId}
           originalUrl={content.originalUrl}
+          description={content.description}
         />
       </div>
 
-      {/* ── Creator row: name (left) + 原始連結 (right) ─────────────────── */}
+      {/* ── Creator row: name + subscribe (left) + source link (right) ───── */}
       <div className="flex-shrink-0 flex items-center justify-between gap-2 px-4 pt-2.5 pb-1.5 bg-black md:bg-white md:dark:bg-gray-900">
-        <span className="border border-blue-400 text-white md:text-gray-800 md:dark:text-gray-200 text-sm px-2.5 py-0.5 rounded-lg font-medium truncate max-w-[60%]">
-          <span suppressHydrationWarning>{flag}</span>{' '}
-          {content.creator.name}
-        </span>
+        <div className="flex items-center gap-2 min-w-0 max-w-[75%]">
+          <span className="border border-blue-400 text-white md:text-gray-800 md:dark:text-gray-200 text-sm px-2.5 py-0.5 rounded-lg font-medium truncate">
+            <span suppressHydrationWarning>{flag}</span>{' '}
+            {content.creator.name}
+          </span>
+          <button
+            type="button"
+            onClick={() => setIsSubscribeOpen(true)}
+            className="text-[11px] px-2 py-1 rounded-md bg-blue-500 text-white hover:bg-blue-600 transition-colors whitespace-nowrap"
+          >
+            訂閱
+          </button>
+        </div>
 
-        <a
-          href={content.originalUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 text-[11px] font-medium text-white/80 md:text-gray-500 md:dark:text-gray-400 hover:text-blue-400 transition-colors flex-shrink-0"
-        >
-          {t('card.original')}
-          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
+        {content.originalUrl && (
+          <a
+            href={content.originalUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 text-[11px] font-medium text-white/80 md:text-gray-500 md:dark:text-gray-400 hover:text-blue-400 transition-colors flex-shrink-0"
+          >
+            {t('card.original')}
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        )}
       </div>
+
+      {isSubscribeOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center px-4"
+          onClick={() => setIsSubscribeOpen(false)}
+        >
+          <div
+            className="w-full max-w-sm rounded-2xl bg-white dark:bg-gray-900 p-5 shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">訂閱 {content.creator.name}</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">價格：99 NTD / month</p>
+            <div className="flex justify-end gap-2">
+              <button
+                type="button"
+                onClick={() => setIsSubscribeOpen(false)}
+                className="px-3 py-1.5 rounded-md text-sm text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 hover:opacity-90"
+              >
+                關閉
+              </button>
+              <button
+                type="button"
+                onClick={() => setIsSubscribeOpen(false)}
+                className="px-3 py-1.5 rounded-md text-sm text-white bg-blue-600 hover:bg-blue-700"
+              >
+                確認訂閱
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Stats bar ─────────────────────────────────────────────────────── */}
       {/*

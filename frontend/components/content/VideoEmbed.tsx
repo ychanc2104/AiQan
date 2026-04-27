@@ -5,18 +5,25 @@ import InstagramEmbed from './embeds/InstagramEmbed'
 
 interface VideoEmbedProps {
   platform: Platform
-  videoId: string
-  originalUrl: string
+  videoId?: string
+  originalUrl?: string
+  description?: string
 }
 
-export default function VideoEmbed({ platform, videoId, originalUrl }: VideoEmbedProps) {
+export default function VideoEmbed({ platform, videoId, originalUrl, description }: VideoEmbedProps) {
   switch (platform) {
     case 'youtube':
-      return <YouTubeEmbed videoId={videoId} />
+      return videoId ? <YouTubeEmbed videoId={videoId} /> : null
     case 'instagram':
-      return <InstagramEmbed reelId={videoId} />
+      return videoId ? <InstagramEmbed reelId={videoId} /> : null
+    case 'post':
+      return (
+        <div className="h-full w-full bg-gradient-to-br from-slate-900 to-slate-700 text-white p-5 flex items-center">
+          <p className="text-base md:text-lg leading-relaxed">{description}</p>
+        </div>
+      )
     case 'tiktok':
     default:
-      return <TikTokEmbed videoId={videoId} originalUrl={originalUrl} />
+      return videoId && originalUrl ? <TikTokEmbed videoId={videoId} originalUrl={originalUrl} /> : null
   }
 }
